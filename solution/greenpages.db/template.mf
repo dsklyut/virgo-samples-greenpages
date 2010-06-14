@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GreenPages DataSource
+Bundle-SymbolicName: greenpages.db
+Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 2.0
+Import-Package: 
+ org.h2;version="[1.0.71, 1.0.71]"
+Import-Template: 
+ org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
+ javax.sql;version="0"

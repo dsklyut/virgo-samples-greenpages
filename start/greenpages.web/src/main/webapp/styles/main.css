@@ -1,0 +1,290 @@
+/* 
+ * MAIN CSS
+ *
+ * All styles for the screen, other than color-specific styles,
+ * should be included here.  
+ *
+ * COMMON STYLES
+ */
+body {
+	font: 12px Helvetica, Arial, "Bitstream Vera Sans", sans-serif;
+	background-color: #dfdfdf;
+}
+
+#page {
+	margin: auto;
+	width: 800px;
+	color: #333;
+}
+
+/*
+ * HEADER STYLES
+ */
+#header {
+	background: #fff url(../images/header-right.png) no-repeat scroll right top;
+	width: 100%;
+	height: 100px;
+}
+
+#name-and-company {
+	background: transparent url(../images/header-left.png) no-repeat top left;
+	width: 100%;
+	height: 100px;
+	top: 0px;
+	left: 0px;
+}
+
+#site-name {
+	background: transparent url(../images/header-title-left.png) no-repeat scroll center center;
+	height: 100px;
+	width: 345px;
+}
+
+#site-name a, #site-name a:hover {
+	height: 60px;
+	width: 190px;
+}
+
+#company-name a, #site-name a:hover {
+	height: 60px;
+	width: 190px;
+}
+
+
+/*
+ * TEXT FORMATTING STYLES
+ */
+h1 {
+	font-size: 1.4em;
+	padding: 12px 0 5px 0;
+	line-height: 125%;
+	color: #002E62;
+	border-bottom: 1px solid #BAD9EC;
+}
+
+h2 {
+	font-size: 1.2em;
+	padding: 10px 0 2px 0;
+	color: #002E62;
+}
+
+h3 {
+	font-size: 1em;
+	padding: 8px 0 5px 0;
+	color: #002E62;
+}
+
+h4 {
+	font-size: 1em;
+	padding-top: 8px;
+	color: #333;
+}
+
+h5 {
+	font-size: 1em;
+	padding-top: 6px;
+	color: #333;
+}
+
+/*
+ * LINK STYLES
+ */
+ 
+a:link, a:visited {
+	color: #333;
+	text-decoration: underline;
+}
+
+a:hover, a:focus {
+	color: #0093CF;
+	text-decoration: underline;
+}
+
+a:active, a.active { 
+	color: #0093CF;
+}
+  
+/*
+ * MENU STYLES
+ */
+#primary-navigation {
+	background: #fff url(../images/menu-stretch.png) repeat-x scroll 0 0;
+	height:29px;
+	margin:0;
+	padding:0;
+	position: relative;
+}
+
+#primary-left {
+	background: #002E62;
+	float: left;
+	height: 26px;
+	line-height: normal;
+	padding: 3px 0 0;
+	position: relative;
+}
+
+#primary-right {
+	background: #002E62;
+	float: right;
+	height: 26px;
+	line-height: normal;
+	padding: 3px 0 0;
+	position: relative;
+}
+
+#primary-left ul, #primary-right ul {
+	padding: 0 4px 0 4px;
+	margin: 2px 0 0 0;
+	list-style: none;
+}
+
+#primary-left li, #primary-right li {
+	display: inline;
+}
+
+#primary-left a, #primary-right a {
+	color: #ffffff;
+	display: block;
+	float: left;
+	font-weight:normal;
+	margin: 0 1px 0 1px;
+	padding: 7px 8px 4px 10px;
+	text-decoration: none;
+}
+
+#primary-left a:hover, #primary-right a:hover, .selected-menu {
+	background: #ffffff;
+	color:#002E62;
+	text-decoration: none;
+}
+
+#left-curve {
+	float: left;
+}
+
+#right-curve {
+	float: right;
+}
+
+/*
+ * CONTAINER STYLES
+ */
+#content-no-nav {
+	display: block;
+	margin: 0px 22px 20px 22px;
+	padding: 0;
+}
+ 
+#container {
+	margin: 0;
+	padding-bottom: 20px;
+	overflow:hidden;
+	background:#fff;
+}
+
+/*
+ * TABLE STYLES
+ */
+table {
+	border-spacing: 0;
+	margin: 0;
+	border-collapse: collapse;
+	color:#666;
+}
+
+th {
+	height: 19px;
+	text-align: left;
+	font-weight: bold;
+	margin: 0;
+	padding: 3px 6px 0 6px;
+	line-height: 19px;
+	color:#333;
+}
+ 
+.bordered-table {
+	border:1px solid #BAD9EC;
+}
+
+.bordered-table th {
+	background-image: url(../images/table-header-background.png);
+	background-repeat: repeat-x;
+	white-space: nowrap;
+	border-bottom: 1px solid #BAD9EC;
+}
+
+td {
+	margin: 0;
+	padding: 4px 6px 4px 6px;
+	vertical-align: top;
+}
+
+td.table-icon {
+	padding-top: 2px;
+	padding-bottom: 1px;
+}
+
+.sublevel1-odd {
+	background:#fff;
+}
+ 
+.sublevel1-even {
+	background:#E8F6FF;
+}
+
+.two-tables {
+	width:100%;
+}
+
+.two-tables .left {
+	float:left;
+}
+
+.two-tables .right {
+	float:right;
+}
+
+/*
+ * FOOTER STYLES
+ */
+#footer-wrapper {
+	clear: both;
+	margin: 0;
+	background-image: url(../images/footer-stretch.png);
+	background-repeat: repeat-x;
+	height: 29px;
+	width: 100%;
+}
+
+#footer-left, #footer-right {
+	margin: 0;
+	font-size: 85%;
+	padding: 1em;
+	height: 29px;
+    color: #bbb;
+}
+
+#footer-left {
+	text-align: left;
+	background-image: url(../images/footer-left.png);
+	background-repeat: no-repeat;
+	position: relative;
+	left: 0;
+	float: left;
+}
+
+#footer-right {
+	text-align: right;
+	background-image: url(../images/footer-right.png);
+	background-repeat: no-repeat;
+	background-position: top right;
+	position: relative;
+	right: 0;
+	float: right;
+}
+
+#footer-left a, #footer-right a {
+    color: #999;
+    text-decoration:none;
+}

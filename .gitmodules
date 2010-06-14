@@ -1,0 +1,3 @@
+[submodule "virgo-build"]
+	path = virgo-build
+	url = git://git.eclipse.org/gitroot/virgo/org.eclipse.virgo.virgo-build.git

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
+	 		p:driverClassName="org.h2.Driver" p:url="jdbc:h2:.~/greenpages-db/greenpages"
+	 		p:username="greenpages" p:password="pass"
+	 		init-method="createDataSource" destroy-method="close"/>
+
+	<bean class="greenpages.web.TestDataPopulator" init-method="populate">
+		<constructor-arg ref="dataSource"/>
+		<constructor-arg value="file:../../db/db.sql"/>
+	</bean>
+
+</beans>

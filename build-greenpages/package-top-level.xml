@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="package-top-level">
+
+	<target name="package" description="Creates the release package for this project">
+		<delete dir="${package.output.dir}" quiet="true"/>
+		<mkdir dir="${package.output.dir}"/>
+		<delete file="${package.output.file}" quiet="true"/>
+		<mkdir dir="${artifacts.dir}"/>
+
+		<copy todir="${package.output.dir}">
+			<fileset dir="${basedir}/resources"/>
+		</copy>
+
+		<copy todir="${package.output.dir}">
+			<fileset dir="${basedir}/..">
+				<include name="db/**"/>
+				<include name="start/**"/>
+				<include name="solution/**"/>
+				<exclude name="**/target/**"/>
+			</fileset>
+		</copy>
+
+		<chmod perm="755">
+			<fileset dir="${package.output.dir}">
+				<include name="**/*.sh"/>
+			</fileset>
+		</chmod>
+
+		<zip destfile="${package.output.file}">
+			<zipfileset dir="${package.dir}" includes="${package.basename}/**/*.sh" filemode="755"/>
+			<zipfileset dir="${package.dir}" excludes="${package.basename}/**/*.sh"/>
+		</zip>
+	</target>
+
+</project>

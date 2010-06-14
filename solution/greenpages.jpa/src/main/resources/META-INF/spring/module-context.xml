@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Application context definition for GreenPages JPA.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+
+	<!--
+		Activates a load-time weaver for the context. Any bean within the context that
+		implements LoadTimeWeaverAware (such as LocalContainerEntityManagerFactoryBean)
+		will receive a reference to the autodetected load-time weaver.
+	-->
+	<context:load-time-weaver aspectj-weaving="on"/>
+	
+	<!-- JPA EntityManagerFactory -->
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" p:dataSource-ref="dataSource">
+		<property name="jpaVendorAdapter">
+			<bean id="jpaVendorAdapter" class="org.springframework.orm.jpa.vendor.EclipseLinkJpaVendorAdapter"
+					p:databasePlatform="org.eclipse.persistence.platform.database.HSQLPlatform" p:showSql="true"/>
+		</property>
+	</bean>
+
+	<!-- Transaction manager for a single JPA EntityManagerFactory (alternative to JTA) -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+			p:entityManagerFactory-ref="entityManagerFactory"/>
+
+
+	<!-- ========================= BUSINESS OBJECT DEFINITIONS ========================= -->
+
+	<!--
+		Activates various annotations to be detected in bean classes: Spring's
+		@Required and @Autowired, as well as JSR 250's @PostConstruct,
+		@PreDestroy and @Resource (if available) and JPA's @PersistenceContext
+		and @PersistenceUnit (if available).
+	-->
+	<context:annotation-config/>
+
+	<!--
+		Instruct Spring to perform declarative transaction management
+		automatically on annotated classes.
+	-->
+	<tx:annotation-driven mode="aspectj"/>
+
+	<!--
+		Post-processor to perform exception translation on @Repository classes (from native
+		exceptions such as JPA PersistenceExceptions to Spring's DataAccessException hierarchy).
+	-->
+	<bean class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor"/>
+
+	<!--
+		Will automatically be transactional due to @Transactional.
+		EntityManager will be auto-injected due to @PersistenceContext.
+		PersistenceExceptions will be auto-translated due to @Repository.
+	-->
+	<bean id="directory" class="greenpages.jpa.JpaDirectory"/>
+	 
+</beans>

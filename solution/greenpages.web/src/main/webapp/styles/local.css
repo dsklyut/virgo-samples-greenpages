@@ -1,0 +1,40 @@
+/* 
+ *  Local style information for the Virgo Splash Screen
+ *
+ *  Contains both style and colour information and 
+ *  overrides content from the dojo/tundra style.
+ *
+ *  Christopher Frost - March 2010
+ *
+ */
+ 
+#mini-header, #mini-header-left, #mini-header-right {
+	height: 7px;
+	width: 7px;
+	margin: 0px;
+	padding: 0px;
+}
+
+#mini-header {
+	width: 100%;
+	background-color: #002e62; 
+}
+
+#mini-header-left {
+	background-image: url(../images/mini-header-left.png); 
+	background-repeat: no-repeat; 
+	background-position: left top;
+	float: left;
+}
+
+#mini-header-right {
+	background-image: url(../images/mini-header-right.png); 
+	background-repeat: no-repeat scroll; 
+	background-position: right top;
+	float: right;
+}
+ 
+#content-no-nav {
+	background: transparent url(../images/s2ap_soda_can.png) no-repeat bottom right;
+	height: 400px;
+}
