@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Application-SymbolicName: greenpages
-Application-Version: 2.0.0
+Application-Version: 2.0.1
 Application-Name: Greenpages PAR
 
