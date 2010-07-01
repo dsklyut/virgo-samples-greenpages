@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: GreenPages Web
+Bundle-Name: (incubation) GreenPages Web
 Import-Library: org.springframework.spring;version="[3.0, 3.1)"
 Import-Bundle: com.springsource.org.apache.taglibs.standard;version="[
  1.1.2,1.3)"

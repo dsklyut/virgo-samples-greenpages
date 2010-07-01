@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: GreenPages DataSource
+Bundle-Name: (incubation) GreenPages DataSource
 Bundle-SymbolicName: greenpages.db
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.0

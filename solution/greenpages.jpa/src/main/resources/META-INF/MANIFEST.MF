@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: GreenPages JPA
+Bundle-Name: (incubation) GreenPages JPA
 Import-Bundle: com.springsource.org.eclipse.persistence;version="[1.0.
  0, 1.0.0]",com.springsource.org.eclipse.persistence.jpa;version="[1.0
  .0, 1.0.0]"

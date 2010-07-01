@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: GreenPages DataSource
+Bundle-Name: (incubation) GreenPages DataSource
 Bundle-Classpath: .
 Import-Package: javax.sql;version="0",org.apache.commons.dbcp;version=
  "[1.2.2.osgi, 1.2.2.osgi]",org.h2;version="[1.0.71, 1.0.71]"

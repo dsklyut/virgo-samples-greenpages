@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: GreenPages JPA
+Bundle-Name: (incubation) GreenPages JPA
 Bundle-SymbolicName: greenpages.jpa
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.0
