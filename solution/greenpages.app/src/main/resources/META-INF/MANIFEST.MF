@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
-Bundle-Name: (incubation) GreenPages Service
+Bundle-Name: GreenPages Service
 Bundle-Classpath: .
 Import-Package: org.springframework.stereotype;version="[3.0, 3.1)"
 Bundle-ManifestVersion: 2

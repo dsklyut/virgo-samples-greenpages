@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: (incubation) GreenPages Service
+Bundle-Name: GreenPages Service
 Bundle-SymbolicName: greenpages
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.0
