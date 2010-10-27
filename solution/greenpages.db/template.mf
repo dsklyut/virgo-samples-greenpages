@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages DataSource
 Bundle-SymbolicName: greenpages.db
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.0
+Bundle-Version: 2.3.0
 Import-Package: 
  org.h2;version="[1.0.71, 1.0.71]"
 Import-Template: 

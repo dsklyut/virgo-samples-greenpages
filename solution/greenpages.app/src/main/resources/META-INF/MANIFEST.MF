@@ -1,11 +1,10 @@
 Manifest-Version: 1.0
-Bundle-Name: GreenPages Service
-Bundle-Classpath: .
-Import-Package: org.springframework.stereotype;version="[3.0, 3.1)"
-Bundle-ManifestVersion: 2
+Export-Package: greenpages;version="2.3.0"
 Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 2.3.0
+Tool: Bundlor 1.0.0.RELEASE
+Bundle-Name: GreenPages Service
+Bundle-ManifestVersion: 2
 Bundle-SymbolicName: greenpages
-Tool: Bundlor 1.0.0.M6
-Export-Package: greenpages;version="2.0"
-Bundle-Version: 2.0
+Import-Package: org.springframework.stereotype;version="[3.0, 3.1)"
 
