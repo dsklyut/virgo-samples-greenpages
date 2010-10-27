@@ -10,7 +10,6 @@ Import-Template:
 Import-Package: 
  javax.servlet.jsp.jstl.core;version="[1.1.2,1.2.0)",
  org.eclipse.virgo.web.dm;version="[2.0.0, 3.0.0)",
- org.springframework.web.context;version="[3.0, 3.1)",
  freemarker.cache;version="[2.3.15,2.3.15]"
 Import-Bundle: 
  com.springsource.org.apache.taglibs.standard;version="[1.1.2,1.3)"

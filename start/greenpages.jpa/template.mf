@@ -3,9 +3,13 @@ Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages JPA
 Bundle-SymbolicName: greenpages.jpa
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.0
+Bundle-Version: 2.3.0
 Import-Template: 
- org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]"
+ org.springframework.*;version="[3.0, 3.1)",
+ greenpages;version="[2.3, 2.4)",
+ javax.persistence;version="[1.0.0, 1.0.0]",
+ org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
+ javax.sql;version="0"
 Excluded-Imports: 
  org.springframework.test.*,
  org.junit.*
