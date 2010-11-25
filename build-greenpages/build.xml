@@ -8,6 +8,7 @@
 	<property file="${basedir}/../build.properties"/>
 	<property file="${basedir}/../build.versions"/>
 	<import file="${basedir}/package-top-level.xml"/>
+	<import file="${basedir}/publish-top-level.xml"/>
 	<import file="${basedir}/../virgo-build/multi-bundle/default.xml"/>
 
 </project>

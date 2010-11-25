@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="publish-top-level">
 
-	<target name="publish" depends="publish-package"
-			description="Publishes the package artifact"/>
+	<target name="publish" depends="publish-package-eclipse-build, publish-package-amazon"
+			description="Publishes the packaged artifact to eclipse and amazon"/>
+
+	<target name="publish-download" depends="publish-package-eclipse-download"
+			description="Publishes the packaged artifact to eclipse for download (eclipse.committerId must be provided)" />
 
 </project>
