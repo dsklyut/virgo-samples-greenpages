@@ -3,7 +3,7 @@ Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages JPA
 Bundle-SymbolicName: greenpages.jpa
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.3.0
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Import-Template: 
  org.springframework.*;version="[3.0, 3.1)",
  greenpages;version="[2.3, 2.4)",

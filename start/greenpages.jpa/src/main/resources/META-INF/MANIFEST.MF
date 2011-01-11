@@ -1,14 +1,8 @@
 Manifest-Version: 1.0
-Export-Package: greenpages.jpa;version="2.3.0";uses:="greenpages,javax
- .sql,org.junit,org.springframework.beans.factory.annotation,org.sprin
- gframework.core.io"
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.3.0
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Tool: Bundlor 1.0.0.RELEASE
 Bundle-Name: GreenPages JPA
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: greenpages.jpa
-Import-Package: greenpages;version="[2.3, 2.4)",javax.sql;version="0",
- org.springframework.beans.factory.annotation;version="[3.0, 3.1)",org
- .springframework.core.io;version="[3.0, 3.1)"
 
