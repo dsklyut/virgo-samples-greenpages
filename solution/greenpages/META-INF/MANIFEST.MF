@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
 Application-SymbolicName: greenpages
-Application-Version: 2.4.0.BUILD-SNAPSHOT
+Application-Version: 2.4.0.DEV
 Application-Name: Greenpages PAR
 

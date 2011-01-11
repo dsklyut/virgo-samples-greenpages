@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages Service
-Bundle-SymbolicName: greenpages
+Bundle-SymbolicName: greenpages.app
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.3.0
+Bundle-Version: 2.4.0.DEV
 Import-Template: 
  org.springframework.*;version="[3.0, 3.1)"
 Excluded-Exports: 

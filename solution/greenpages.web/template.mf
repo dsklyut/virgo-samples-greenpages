@@ -2,11 +2,11 @@ Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages Web
 Bundle-SymbolicName: greenpages.web
-Bundle-Version: 2.4.0.BUILD-SNAPSHOT
+Bundle-Version: 2.4.0.DEV
 Web-ContextPath: greenpages
 Import-Template: 
  org.springframework.*;version="[3.0, 3.1)",
- greenpages.*;version="[2.3, 2.4)"
+ greenpages.*;version="[2.3, 3.0)"
 Import-Package: 
  javax.servlet.jsp.jstl.core;version="[1.1.2,1.2.0)",
  org.eclipse.virgo.web.dm;version="[2.0.0, 3.0.0)",
