@@ -31,7 +31,7 @@ public class DirectoryImpl implements Directory {
     /**
      * {@inheritDoc}
      * 
-     * Stub implementation will match only for term '<code>johnson</code>'.
+     * Stub implementation will match only for term '<code>Wilkinson</code>'.
      */
     public List<Listing> search(String term) {
         if (ANDY_WILKINSON.getLastName().equalsIgnoreCase(term)) {
