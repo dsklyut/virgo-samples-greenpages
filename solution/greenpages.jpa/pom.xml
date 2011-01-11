@@ -7,7 +7,7 @@
 	<parent>
 		<groupId>com.springsource.dmserver</groupId>
 		<artifactId>greenpages.parent-solution</artifactId>
-		<version>2.3.0.RELEASE</version>
+		<version>2.4.0.BUILD-SNAPSHOT</version>
 		<relativePath>../parent</relativePath>
 	</parent>
 

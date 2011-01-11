@@ -2,10 +2,18 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	
+	<jdbc:embedded-database id="dataSource" type="H2">
+	   <jdbc:script location="file:../../db/db.sql"/>
+	</jdbc:embedded-database>
+	
+	<!--
 
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" 
-	 		p:driverClassName="org.h2.Driver" p:url="jdbc:h2:.~/greenpages-db/greenpages"
+	 		p:driverClassName="org.h2.Driver" p:url="jdbc:h2:./target/greenpages-db/greenpages"
 	 		p:username="greenpages" p:password="pass"
 	 		init-method="createDataSource" destroy-method="close"/>
 
@@ -14,4 +22,5 @@
 		<constructor-arg value="file:../../db/db.sql"/>
 	</bean>
 
+-->
 </beans>

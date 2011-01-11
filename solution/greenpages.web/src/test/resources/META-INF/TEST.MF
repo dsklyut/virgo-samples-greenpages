@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Import-Package: javax.sql,org.apache.commons.dbcp,org.springframework.
+ core.io;version="[3.0, 3.1)"
+

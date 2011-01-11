@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Import-Bundle: com.springsource.org.apache.taglibs.standard;version="[
  1.1.2,1.3)"
-Bundle-Version: 2.3.0
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Tool: Bundlor 1.0.0.RELEASE
 Bundle-Name: GreenPages Web
 Import-Library: org.springframework.spring;version="[3.0, 3.1)"
@@ -10,13 +10,11 @@ Bundle-SymbolicName: greenpages.web
 Web-ContextPath: greenpages
 Import-Package: freemarker.cache;version="[2.3.15,2.3.15]",greenpages;
  version="[2.3, 2.4)",javax.servlet.jsp.jstl.core;version="[1.1.2,1.2.
- 0)",javax.sql,org.apache.commons.dbcp,org.eclipse.virgo.web.dm;versio
- n="[2.0.0, 3.0.0)",org.springframework.beans.factory.annotation;versi
- on="[3.0, 3.1)",org.springframework.core.io;version="[3.0, 3.1)",org.
- springframework.stereotype;version="[3.0, 3.1)",org.springframework.w
- eb.bind.annotation;version="[3.0, 3.1)",org.springframework.web.conte
- xt;version="[3.0, 3.1)",org.springframework.web.servlet;version="[3.0
- , 3.1)",org.springframework.web.servlet.mvc.annotation;version="[3.0,
-  3.1)",org.springframework.web.servlet.view.freemarker;version="[3.0,
-  3.1)"
+ 0)",org.eclipse.virgo.web.dm;version="[2.0.0, 3.0.0)",org.springframe
+ work.beans.factory.annotation;version="[3.0, 3.1)",org.springframewor
+ k.stereotype;version="[3.0, 3.1)",org.springframework.web.bind.annota
+ tion;version="[3.0, 3.1)",org.springframework.web.context;version="[3
+ .0, 3.1)",org.springframework.web.servlet;version="[3.0, 3.1)",org.sp
+ ringframework.web.servlet.mvc.annotation;version="[3.0, 3.1)",org.spr
+ ingframework.web.servlet.view.freemarker;version="[3.0, 3.1)"
 
