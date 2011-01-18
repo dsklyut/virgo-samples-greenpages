@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.4.0.DEV
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Tool: Bundlor 1.0.0.RELEASE
 Bundle-Name: GreenPages DataSource
 Bundle-ManifestVersion: 2

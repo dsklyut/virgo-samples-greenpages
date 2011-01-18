@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Import-Bundle: com.springsource.org.apache.taglibs.standard;version="[
  1.1.2,1.3)"
-Bundle-Version: 2.4.0.DEV
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Tool: Bundlor 1.0.0.RELEASE
 Bundle-Name: GreenPages Web
 Import-Library: org.springframework.spring;version="[3.0, 3.1)"
