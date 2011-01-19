@@ -1,83 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-		xmlns="http://maven.apache.org/POM/4.0.0"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<parent>
-		<groupId>com.springsource.dmserver</groupId>
-		<artifactId>greenpages.parent-solution</artifactId>
-		<version>2.4.0.BUILD-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
-	</parent>
+    <parent>
+        <groupId>org.eclipse.virgo.samples</groupId>
+        <artifactId>greenpages.parent-solution</artifactId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+        <relativePath>../parent</relativePath>
+    </parent>
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.springsource.dmserver</groupId>
-	<artifactId>greenpages-solution</artifactId>
-	<name>GreenPages PAR</name>
-	<description>GreenPages PAR</description>
-	<packaging>par</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.eclipse.virgo.samples</groupId>
+    <artifactId>greenpages-solution</artifactId>
+    <name>GreenPages PAR</name>
+    <description>GreenPages PAR</description>
+    <packaging>par</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>com.springsource.dmserver</groupId>
-			<artifactId>greenpages.app-solution</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.springsource.dmserver</groupId>
-			<artifactId>greenpages.jpa-solution</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.springsource.dmserver</groupId>
-			<artifactId>greenpages.db-solution</artifactId>
-			<version>${project.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.springsource.dmserver</groupId>
-			<artifactId>greenpages.web-solution</artifactId>
-			<version>${project.version}</version>
-			<type>war</type>
-		</dependency>
-		
-		<!-- Required for the web bundle as dependancies are not propagated up from war build types -->
-		<dependency>
-			<groupId>org.freemarker</groupId>
-			<artifactId>com.springsource.freemarker</artifactId>
-			<scope>provided</scope>
-		</dependency>
-	</dependencies>
+    <properties>
+        <persistence.artifactId>greenpages.eclipselink.jpa-solution</persistence.artifactId>
+    </properties>
 
-	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-par-plugin</artifactId>
-				<version>1.0.0.RELEASE</version>
-				<configuration>
-					<applicationSymbolicName>greenpages</applicationSymbolicName>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>copy-dependencies</id>
-						<phase>package</phase>
-						<goals>
-							<goal>copy-dependencies</goal>
-						</goals>
-						<configuration>
-							<outputDirectory>${project.build.directory}/par-provided</outputDirectory>
-							<overWriteIfNewer>true</overWriteIfNewer>
-							<excludeGroupIds>com.springsource.dmserver,org.apache.log4j,org.slf4j,ch.qos.logback</excludeGroupIds>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-		</plugins>
-	</build>
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.virgo.samples</groupId>
+            <artifactId>greenpages.app-solution</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.virgo.samples</groupId>
+            <artifactId>${persistence.artifactId}</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.virgo.samples</groupId>
+            <artifactId>greenpages.db-solution</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.virgo.samples</groupId>
+            <artifactId>greenpages.web-solution</artifactId>
+            <version>${project.version}</version>
+            <type>war</type>
+        </dependency>
+
+        <!-- Required for the web bundle as dependencies are not propagated up from war build types -->
+        <!-- not really as dependency on pom can be provided -->
+        <!--<dependency>-->
+        <!--<groupId>org.freemarker</groupId>-->
+        <!--<artifactId>com.springsource.freemarker</artifactId>-->
+        <!--<scope>provided</scope>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.eclipse.virgo.samples</groupId>
+            <artifactId>greenpages.web-solution</artifactId>
+            <version>${project.version}</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-par-plugin</artifactId>
+                <version>1.0.0.RELEASE</version>
+                <configuration>
+                    <applicationSymbolicName>greenpages</applicationSymbolicName>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-dependencies</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/par-provided</outputDirectory>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <excludeGroupIds>org.eclipse.virgo.samples,org.apache.log4j,org.slf4j,ch.qos.logback
+                            </excludeGroupIds>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <profiles>
+        <profile>
+            <id>hibernate.jpa</id>
+            <properties>
+                <persistence.artifactId>greenpages.hibernate.jpa-solution</persistence.artifactId>
+            </properties>
+        </profile>
+        <profile>
+            <id>hibernate.native</id>
+            <properties>
+                <persistence.artifactId>greenpages.hibernate.native-solution</persistence.artifactId>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>

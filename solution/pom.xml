@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-		xmlns="http://maven.apache.org/POM/4.0.0"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.springsource.dmserver</groupId>
-	<artifactId>greenpages-top-level-solution</artifactId>
-	<version>2.4.0.BUILD-SNAPSHOT</version>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.eclipse.virgo.samples</groupId>
+    <artifactId>greenpages-top-level-solution</artifactId>
+    <version>2.4.0.BUILD-SNAPSHOT</version>
     <name>GreenPages App Build</name>
-	<packaging>pom</packaging>
-	<modules>
-		<module>parent</module>
-		<module>greenpages.db</module>
-		<module>greenpages.app</module>
-		<module>greenpages.jpa</module>
-		<module>greenpages.web</module>
-		<module>greenpages</module>
-	</modules>
+    <packaging>pom</packaging>
+    <modules>
+        <module>parent</module>
+        <module>greenpages.db</module>
+        <module>greenpages.app</module>
+        <module>greenpages.eclipselink.jpa</module>
+        <module>greenpages.hibernate.jpa</module>
+        <module>greenpages.hibernate.native</module>
+        <module>greenpages.web</module>
+        <module>greenpages</module>
+        <module>greenpages.test</module>
+    </modules>
 </project>

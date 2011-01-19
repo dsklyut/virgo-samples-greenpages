@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GreenPages JPA
+Bundle-SymbolicName: greenpages.jpa
+Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
+Excluded-Imports: com.springsource,
+ org.eclipse.virgo.osgi.extensions.*,
+ org.eclipse.virgo.test.*,
+ org.eclipse.gemini.web.tomcat.config
+Excluded-Exports: *
+Import-Package: org.osgi.framework;version="0"
+Import-Template: *;version="0"

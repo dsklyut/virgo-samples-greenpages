@@ -3,7 +3,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.springsource.dmserver</groupId>
+    <groupId>org.eclipse.virgo.samples</groupId>
     <artifactId>greenpages.parent-solution</artifactId>
     <version>2.4.0.BUILD-SNAPSHOT</version>
     <name>greenpages.parent</name>
@@ -16,6 +16,7 @@
         <slf4j.version>1.6.1</slf4j.version>
         <logback.version>0.9.24</logback.version>
         <spring.version>3.0.0.RELEASE</spring.version>
+        <spring.osgi.version>1.2.1</spring.osgi.version>
     </properties>
 
     <dependencyManagement>
@@ -28,6 +29,39 @@
                 <scope>provided</scope>
             </dependency>
             <dependency>
+                <groupId>org.springframework.osgi</groupId>
+                <artifactId>org.springframework.osgi.core</artifactId>
+                <version>${spring.osgi.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.osgi</groupId>
+                <artifactId>org.springframework.osgi.extender</artifactId>
+                <version>${spring.osgi.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.osgi</groupId>
+                <artifactId>org.springframework.osgi.io</artifactId>
+                <version>${spring.osgi.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.commons</groupId>
+                        <artifactId>com.springsource.org.apache.commons.logging</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
                 <version>1.2.2.osgi</version>
@@ -37,24 +71,6 @@
                 <groupId>com.h2database</groupId>
                 <artifactId>com.springsource.org.h2</artifactId>
                 <version>1.0.71</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>javax.persistence</groupId>
-                <artifactId>com.springsource.javax.persistence</artifactId>
-                <version>1.0.0</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>com.springsource.org.eclipse.persistence</artifactId>
-                <version>1.0.0</version>
-                <scope>compile</scope>
-            </dependency>
-            <dependency>
-                <groupId>org.eclipse.persistence</groupId>
-                <artifactId>com.springsource.org.eclipse.persistence.jpa</artifactId>
-                <version>1.0.0</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
@@ -209,11 +225,34 @@
     </pluginRepositories>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.springsource.bundlor</groupId>
+                    <artifactId>com.springsource.bundlor.maven</artifactId>
+                    <version>1.0.0.RELEASE</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>2.3.2</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <version>2.3.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-surefire-plugin</artifactId>
+                    <version>2.7.1</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>com.springsource.bundlor</groupId>
                 <artifactId>com.springsource.bundlor.maven</artifactId>
-                <version>1.0.0.RELEASE</version>
                 <configuration>
                     <failOnWarnings>true</failOnWarnings>
                 </configuration>
