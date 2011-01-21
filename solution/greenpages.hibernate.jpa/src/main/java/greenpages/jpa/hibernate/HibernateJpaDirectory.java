@@ -9,18 +9,16 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package greenpages.jpa;
+package greenpages.jpa.hibernate;
 
 import greenpages.Directory;
 import greenpages.Listing;
-
-import java.util.List;
+import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
+import java.util.List;
 
 /**
  * Implementation of {@link Directory} that uses JPA for persistence.<p />
@@ -30,7 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 @Transactional
 @Repository
-final class JpaDirectory implements Directory {
+final class HibernateJpaDirectory implements Directory {
 
     private static final String SEARCH_QUERY = "select l from Listing l where upper(l.lastName) like :term";
 

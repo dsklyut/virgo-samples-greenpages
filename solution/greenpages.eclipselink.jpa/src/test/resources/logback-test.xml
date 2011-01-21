@@ -1,0 +1,33 @@
+<configuration debug="false">
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <!--<Pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</Pattern>-->
+            <Pattern>%-30(%d{HH:mm:ss.SSS} [%thread]) %-5level %logger{32} - %msg %ex%n</Pattern>
+        </encoder>
+    </appender>
+
+    <logger level="INFO" additivity="false" name="org.springframework">
+        <appender-ref ref="STDOUT"/>
+    </logger>
+
+    <!--<logger level="INFO" additivity="false" name="org.springframework.web">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+
+    <!--<logger level="INFO" additivity="false" name="org.springframework.security">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+
+    <!--<logger level="WARN" additivity="false" name="org.hibernate">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+
+    <!--<logger level="INFO" additivity="false" name="org.springframework.integration">-->
+        <!--<appender-ref ref="STDOUT"/>-->
+    <!--</logger>-->
+
+    <root level="WARN">
+        <appender-ref ref="STDOUT"/>
+    </root>
+</configuration>

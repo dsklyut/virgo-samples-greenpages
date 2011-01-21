@@ -19,6 +19,6 @@
         <module>greenpages.hibernate.native</module>
         <module>greenpages.web</module>
         <module>greenpages</module>
-        <module>greenpages.test</module>
+        <!--<module>greenpages.test</module>-->
     </modules>
 </project>

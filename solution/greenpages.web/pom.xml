@@ -15,6 +15,11 @@
 	<name>greenpages.web</name>
 	<packaging>war</packaging>
 
+    <properties>
+        <!-- manifest for webapp sits in a different directory from jar -->
+        <bundlor.manifest.output.path>${basedir}/src/main/webapp</bundlor.manifest.output.path>
+    </properties>
+    
 	<dependencies>
 		<dependency>
 			<groupId>org.eclipse.virgo.samples</groupId>
@@ -86,11 +91,23 @@
 						</manifestFile> </archive> -->
 				</configuration>
 			</plugin>
+			<!-- overwritting bundlor config to process war vs. on install -->
 			<plugin>
 				<groupId>com.springsource.bundlor</groupId>
 				<artifactId>com.springsource.bundlor.maven</artifactId>
-				<version>1.0.0.RELEASE</version>
 				<executions>
+				    <execution>
+						<id>build-manifest</id>
+						<goals>
+							<goal>bundlor</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<inputPath>${basedir}/target/${project.build.finalName}.war</inputPath>
+                            <outputPath>${bundlor.manifest.output.path}</outputPath>
+							<failOnWarnings>true</failOnWarnings>
+						</configuration>
+					</execution>
 					<execution>
 						<id>build-war</id>
 						<goals>

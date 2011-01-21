@@ -1,22 +1,21 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: GreenPages JPA
-Bundle-SymbolicName: greenpages.eclipselink.jpa
+Bundle-SymbolicName: greenpages.hibernate
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.4.0.BUILD-SNAPSHOT
-Import-Template: 
+Import-Template:
  org.springframework.*;version="[3.0, 3.1)",
  greenpages;version="[2.3, 3.0)",
  javax.persistence;version="[1.0.0, 1.0.0]",
  org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
  javax.sql;version="0"
-Import-Bundle: com.springsource.org.eclipse.persistence;version="[1.0.0, 1.0.0]",
- com.springsource.org.eclipse.persistence.jpa;version="[1.0.0, 1.0.0]"
-Import-Package: 
+Import-Bundle: com.springsource.org.hibernate;version="3.2.6"
+Import-Package:
  org.springframework.context.weaving;version="[3.0, 3.1)",
  org.springframework.transaction.aspectj;version="[3.0, 3.1)"
-Excluded-Exports: 
- greenpages.jpa
-Excluded-Imports: 
+Excluded-Exports:
+ greenpages.hibernate
+Excluded-Imports:
+ org.hibernate.*,
  org.springframework.test.*,
  org.junit.*

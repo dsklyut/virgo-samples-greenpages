@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project
-		xmlns="http://maven.apache.org/POM/4.0.0"
-		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        xmlns="http://maven.apache.org/POM/4.0.0"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-	<parent>
-		<groupId>org.eclipse.virgo.samples</groupId>
-		<artifactId>greenpages.parent-solution</artifactId>
-		<version>2.4.0.BUILD-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
-	</parent>
+    <parent>
+        <groupId>org.eclipse.virgo.samples</groupId>
+        <artifactId>greenpages.parent-solution</artifactId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+        <relativePath>../parent</relativePath>
+    </parent>
 
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.eclipse.virgo.samples</groupId>
-	<artifactId>greenpages.db-solution</artifactId>
-	<name>greenpages.db</name>
-	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>org.eclipse.virgo.samples</groupId>
+    <artifactId>greenpages.db-solution</artifactId>
+    <name>greenpages.db</name>
+    <packaging>jar</packaging>
 
-	<dependencies>
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>org.springframework.spring-library</artifactId>
-			<type>libd</type>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>com.springsource.org.h2</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>org.aspectj-library</artifactId>
-			<type>libd</type>
-		</dependency>
-	</dependencies>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.spring-library</artifactId>
+            <type>libd</type>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>com.springsource.org.apache.commons.dbcp</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.h2database</groupId>
+            <artifactId>com.springsource.org.h2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>org.aspectj-library</artifactId>
+            <type>libd</type>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.instrument</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

@@ -11,6 +11,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <bundlor.manifest.output.path>${basedir}/src/main/resources</bundlor.manifest.output.path>
         <!--<maven.test.failure.ignore>true</maven.test.failure.ignore> -->
 
         <slf4j.version>1.6.1</slf4j.version>
@@ -250,13 +251,7 @@
             </plugins>
         </pluginManagement>
         <plugins>
-            <plugin>
-                <groupId>com.springsource.bundlor</groupId>
-                <artifactId>com.springsource.bundlor.maven</artifactId>
-                <configuration>
-                    <failOnWarnings>true</failOnWarnings>
-                </configuration>
-            </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -267,15 +262,35 @@
                 </configuration>
             </plugin>
             <plugin>
+                <groupId>com.springsource.bundlor</groupId>
+                <artifactId>com.springsource.bundlor.maven</artifactId>
+                <inherited>true</inherited>
+                <configuration>
+                    <failOnWarnings>true</failOnWarnings>
+                    <!-- used to properly set-up versions for system packages -->
+                    <osgiProfilePath>${basedir}/../java6-server.profile</osgiProfilePath>
+                    <bundleVersion>${project.version}</bundleVersion>
+                    <!-- point to a different output path - so manifest will be regenerated on each build
+                    and can be eyeballed if desired.  Also for eclipse use, where manifest is always needed -->
+                    <outputPath>${bundlor.manifest.output.path}</outputPath>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>build-manifest</id>
+                        <goals>
+                            <goal>bundlor</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
                 <configuration>
-                    <useDefaultManifestFile>true</useDefaultManifestFile>
-                    <!--<archive>-->
-                    <!--<manifestFile>-->
-                    <!--src/main/resources/META-INF/MANIFEST.MF-->
-                    <!--</manifestFile>-->
-                    <!--</archive>-->
+                    <!-- <useDefaultManifestFile>true</useDefaultManifestFile> -->
+                    <archive>
+                        <manifestFile>${bundlor.manifest.output.path}/META-INF/MANIFEST.MF</manifestFile>
+                    </archive>
                 </configuration>
             </plugin>
             <plugin>
@@ -292,6 +307,22 @@
                     <argLine>
                         -javaagent:${settings.localRepository}/org/springframework/org.springframework.instrument/3.0.0.RELEASE/org.springframework.instrument-3.0.0.RELEASE.jar
                     </argLine>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-clean-plugin</artifactId>
+                <version>2.4.1</version>
+                <configuration>
+                    <filesets>
+                        <!-- clean old generated MANIFEST.MF files on clean -->
+                        <fileset>
+                            <directory>${basedir}/src/main/resources/META-INF</directory>
+                            <includes>
+                                <include>MANIFEST.MF</include>
+                            </includes>
+                        </fileset>
+                    </filesets>
                 </configuration>
             </plugin>
         </plugins>
