@@ -4,7 +4,7 @@
 		version="1.0">
 
 	<persistence-unit name="GreenPages" transaction-type="RESOURCE_LOCAL">
-		<class>greenpages.jpa.eclipselink.JpaListing</class>
+		<class>greenpages.eclipselink.jpa.JpaListing</class>
 	</persistence-unit>
 
 </persistence>

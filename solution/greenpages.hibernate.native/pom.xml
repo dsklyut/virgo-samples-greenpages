@@ -2,17 +2,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<groupId>org.eclipse.virgo.samples</groupId>
-		<artifactId>greenpages.parent-solution</artifactId>
-		<version>2.4.0.BUILD-SNAPSHOT</version>
-		<relativePath>../parent</relativePath>
-	</parent>
+    <parent>
+        <groupId>org.eclipse.virgo.samples</groupId>
+        <artifactId>greenpages.parent-solution</artifactId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+        <relativePath>../parent</relativePath>
+    </parent>
 
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>greenpages.hibernate.native-solution</artifactId>
-	<name>greenpages.hibernate.native</name>
-	<packaging>jar</packaging>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>greenpages.hibernate.native-solution</artifactId>
+    <name>greenpages.hibernate.native</name>
+    <packaging>jar</packaging>
 
 
     <dependencies>
@@ -34,21 +34,8 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>org.hibernate.ejb-library</artifactId>
-            <type>libd</type>
-            <version>3.4.0.GA</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>org.apache.commons</groupId>
-                    <artifactId>com.springsource.org.apache.commons.logging</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>javax.persistence</groupId>
-            <artifactId>com.springsource.javax.persistence</artifactId>
-            <version>1.0.0</version>
-            <scope>provided</scope>
+            <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
+            <version>3.6.0.Final</version>
         </dependency>
         <dependency>
             <groupId>javax.transaction</groupId>
@@ -78,7 +65,7 @@
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
-            <artifactId>com.springsource.org.h2</artifactId>
+            <artifactId>h2</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

@@ -20,7 +20,7 @@
 
     <!-- in case we want to test jpa2 compliance -->
     <properties>
-        <javax.persistence.version>1.99.0</javax.persistence.version>
+        <javax.persistence.version>1.0.0</javax.persistence.version>
         <org.eclipse.persistence.version>1.0.1</org.eclipse.persistence.version>
     </properties>
     <profiles>
@@ -95,7 +95,7 @@
         </dependency>
         <dependency>
             <groupId>com.h2database</groupId>
-            <artifactId>com.springsource.org.h2</artifactId>
+            <artifactId>h2</artifactId>
             <scope>test</scope>
         </dependency>
         <dependency>

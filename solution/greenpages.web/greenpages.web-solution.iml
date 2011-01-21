@@ -32,32 +32,32 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="greenpages.app-solution" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.aop:3.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.aop:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.aopalliance:com.springsource.org.aopalliance:1.0.0" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.beans:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.core:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.asm:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.context:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.expression:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.context.support:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.jdbc:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.transaction:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.jms:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.orm:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.oxm:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.servlet:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.portlet:3.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.beans:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.core:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.asm:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.context:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.expression:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.context.support:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.jdbc:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.transaction:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.jms:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.orm:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.oxm:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.servlet:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.portlet:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:com.springsource.javax.servlet:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: org.freemarker:com.springsource.freemarker:2.3.15" level="project" />
     <orderEntry type="library" name="Maven: org.apache.log4j:com.springsource.org.apache.log4j:1.2.15" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit:com.springsource.org.junit:4.7.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.test:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.aspects:3.0.0.RELEASE" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.instrument:3.0.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.test:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.aspects:3.0.5.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.instrument:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:com.springsource.org.apache.commons.dbcp:1.2.2.osgi" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.apache.commons:com.springsource.org.apache.commons.pool:1.3.0" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: com.h2database:com.springsource.org.h2:1.0.71" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.h2database:h2:1.2.147" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.aspectj:com.springsource.org.aspectj.runtime:1.6.5.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.aspectj:com.springsource.org.aspectj.weaver:1.6.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:com.springsource.slf4j.api:1.6.1" level="project" />

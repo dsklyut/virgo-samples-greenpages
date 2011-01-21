@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: GreenPages JPA
-Bundle-SymbolicName: greenpages.jpa
+Bundle-SymbolicName: greenpages.hibernate.jpa
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Excluded-Imports: com.springsource,

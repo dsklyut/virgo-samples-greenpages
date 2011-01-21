@@ -9,7 +9,7 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package greenpages.jpa.hibernate;
+package greenpages.hibernate.jpa;
 
 import greenpages.Directory;
 import greenpages.Listing;

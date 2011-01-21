@@ -43,7 +43,7 @@
 	<!--&ndash;&gt;-->
 	<!--<context:annotation-config/>-->
 
-    <context:component-scan base-package="greenpages.jpa.hibernate"/>
+    <context:component-scan base-package="greenpages.hibernate.jpa"/>
 
 	<!--
 		Instruct Spring to perform declarative transaction management
@@ -62,6 +62,6 @@
 		<!--EntityManager will be auto-injected due to @PersistenceContext.-->
 		<!--PersistenceExceptions will be auto-translated due to @Repository.-->
 	<!--&ndash;&gt;-->
-	<!--<bean id="directory" class="greenpages.jpa.hibernate.HibernateJpaDirectory"/>-->
+	<!--<bean id="directory" class="greenpages.hibernate.jpa.HibernateJpaDirectory"/>-->
 	 
 </beans>

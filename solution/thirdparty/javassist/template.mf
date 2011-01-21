@@ -1,0 +1,4 @@
+Bundle-SymbolicName: org.eclipse.virgo.samples.javassist
+Bundle-ManifestVersion: 2
+Bundle-Version: 3.12.0.GA
+Import-Template: com.sun.jdi.*;version="0";resolution:="optional"

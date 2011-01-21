@@ -21,4 +21,13 @@
         <module>greenpages</module>
         <!--<module>greenpages.test</module>-->
     </modules>
+
+    <profiles>
+        <profile>
+            <id>thirdparty</id>
+            <modules>
+                <module>thirdparty</module>
+            </modules>
+        </profile>
+    </profiles>
 </project>

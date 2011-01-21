@@ -45,18 +45,13 @@
             <type>war</type>
         </dependency>
 
-        <!-- Required for the web bundle as dependencies are not propagated up from war build types -->
-        <!-- not really as dependency on pom can be provided -->
-        <!--<dependency>-->
-        <!--<groupId>org.freemarker</groupId>-->
-        <!--<artifactId>com.springsource.freemarker</artifactId>-->
-        <!--<scope>provided</scope>-->
-        <!--</dependency>-->
+        <!-- Required for the web bundle dependencies to be propagated -->
         <dependency>
             <groupId>org.eclipse.virgo.samples</groupId>
             <artifactId>greenpages.web-solution</artifactId>
             <version>${project.version}</version>
             <type>pom</type>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 

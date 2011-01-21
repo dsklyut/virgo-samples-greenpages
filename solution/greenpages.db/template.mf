@@ -5,7 +5,7 @@ Bundle-SymbolicName: greenpages.db
 Bundle-Vendor: SpringSource Inc.
 Bundle-Version: 2.4.0.BUILD-SNAPSHOT
 Import-Package: 
- org.h2;version="[1.0.71, 1.0.71]"
+ org.h2;version="0";bundle-version:=1.2.147
 Import-Template: 
  org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
  javax.sql;version="0"

@@ -60,6 +60,6 @@
 		EntityManager will be auto-injected due to @PersistenceContext.
 		PersistenceExceptions will be auto-translated due to @Repository.
 	-->
-	<bean id="directory" class="greenpages.jpa.eclipselink.JpaDirectory"/>
+	<bean id="directory" class="greenpages.eclipselink.jpa.JpaDirectory"/>
 	 
 </beans>

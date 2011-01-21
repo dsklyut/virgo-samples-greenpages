@@ -1,0 +1,27 @@
+Bundle-SymbolicName: org.hibernate
+Bundle-ManifestVersion: 2
+Bundle-Version: 3.6.0.Final
+Import-Template: antlr.*;version="[2.7.6, 3.0.0)",
+ javassist.*;version="[3.12.0, 4.0.0)",
+ org.slf4j.*;version="[1.5.6, 2.0.0)",
+ javax.persistence.*;version="[2,3)",
+ org.apache.tools.ant.*;version="[1.7.0, 2.0.0)";resolution:=optional,
+ javax.transaction.*;version="[1.0.1, 2.0.0)",
+ net.sf.cglib.*;version="[2.2.0,3.0.0)",
+ org.apache.commons.collections.*;version="[3.1.0, 4.0.0)",
+ org.dom4j.*;version="[1.6.1, 2.0.0)",
+ org.objectweb.asm.*;version="[3.1, 4)",
+ javax.validation.*;version="[1, 2)";resolution:=optional,
+ javax.security.jacc;version="0";resolution:=optional,
+ junit.framework;version="[3.8,4)";resolution:=optional,
+ com.opensymphony.oscache.*;version="[2.1.0, 3.0.0)";resolution:=optional,
+ com.mchange.v2.c3p0.*;version="[0.9.1, 1.0.0)";resolution:=optional,
+ net.sf.ehcache.*;version="[1.2.3, 2.0.0)";resolution:=optional,
+ org.jboss.cache.*;version="[2.1, 4.0.0)";resolution:=optional,
+ org.logicalcobwebs.proxool.*;version="[0.8.3, 1.0.0)";resolution:=optional,
+ net.sf.swarmcache.*;version="[1.0.0.RC2, 2.0.0)";resolution:=optional,
+ org.infinispan.*;version="4.0.0.FINAL";resolution:=optional,
+ org.jgroups.*;version="[2.2.7, 3.0.0)";resolution:=optional
+Excluded-Imports: org.hibernate.tool.ant
+Excluded-Exports: org.hibernate.tool.ant
+

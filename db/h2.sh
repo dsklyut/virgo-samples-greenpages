@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-JARS=`find $HOME/.m2 -iname "com.springsource.org.h2*"`
+JARS=`find $HOME/.m2 -iname "h2*"`
 
 for JAR in $JARS
 do

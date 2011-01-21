@@ -9,31 +9,21 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package greenpages.jpa.hibernate;
+package greenpages.eclipselink.jpa;
 
 import greenpages.Listing;
-
-import javax.persistence.*;
 
 /**
  * Basic implementation of {@link Listing} that is configured as a persistent type in JPA.
  */
-@Entity(name = "Listing")
-@Table(name = "LISTING")
 public class JpaListing implements Listing {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.TABLE)
-    @Column(name = "LISTING_NUMBER")
     private Integer listingNumber;
 
-    @Column(name = "FIRST_NAME")
     private String firstName;
 
-    @Column(name = "LAST_NAME")
     private String lastName;
 
-    @Column(name = "EMAIL_ADDRESS")
     private String emailAddress;
 
     public Integer getListingNumber() {

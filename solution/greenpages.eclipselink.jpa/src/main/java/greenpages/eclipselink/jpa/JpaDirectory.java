@@ -9,7 +9,7 @@
  *   VMware Inc. - initial contribution
  *******************************************************************************/
 
-package greenpages.jpa.eclipselink;
+package greenpages.eclipselink.jpa;
 
 import greenpages.Directory;
 import greenpages.Listing;
