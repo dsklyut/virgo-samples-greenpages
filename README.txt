@@ -25,13 +25,15 @@ How it all works:
 i.e. rm $VIRGO_HOME/repository/ext/org.springframework.*-3.0.0.RELEASE*
 
 4. Switch to greenmodules project to pickup required SpringFramework jars:
-  cd cd virgo-samples-greenpages/solution/greenpages/target/spring-user-region
+  cd virgo-samples-greenpages/solution/greenpages/target/spring-user-region
   cp * $VIRGO_HOME/repository/ext
   
 5. Now it is time to decide which example to run:
    By default eclipselink.jpa repository is packaged in with the par.
    To include hibernate configured as jpa provider rebuild greenpages par project with -Phibernate.jpa profile
    To include hibernate configured to be used through a native API, rebuild greenpages par with -Phibernate.native profile 
+   
+   NOTE: this profile can be used in Step 2 above to save on some typing.
    
 6. Copy dependencies to Virgo and greenpages par archive
   cp greenpages/target/par-provided/* $VIRGO_HOME/repository/usr
