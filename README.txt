@@ -15,7 +15,7 @@ Changes in this version:
 How it all works:
 
 1. Checkout source 
-    git clone git@github.com:dsklyut/virgo-samples-greenpages.git
+    git clone git://github.com/dsklyut/virgo-samples-greenpages.git
     
 2. Build it to generate wrapped hibernate jars and osgi meta-data (MANIFEST.MF) with bundlor
     cd virgo-samples-greenpages/solution
@@ -46,3 +46,7 @@ i.e. rm $VIRGO_HOME/repository/ext/org.springframework.*-3.0.0.RELEASE*
   run.bat
   
 8. Start Virgo server.
+
+Git, Fork and let me know if there are issue.
+
+Dmitry
