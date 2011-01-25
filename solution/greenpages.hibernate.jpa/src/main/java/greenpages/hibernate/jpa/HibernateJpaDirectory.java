@@ -22,7 +22,7 @@ import java.util.List;
 
 /**
  * Implementation of {@link Directory} that uses JPA for persistence.<p />
- * 
+ * <p/>
  * This class is marked as {@link Transactional}. The Spring configuration for this module, enables AspectJ weaving for
  * adding transaction demarcation to classes annotated with <code>@Transactional</code>.
  */

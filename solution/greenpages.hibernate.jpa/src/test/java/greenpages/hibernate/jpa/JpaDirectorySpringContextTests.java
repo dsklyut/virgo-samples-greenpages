@@ -27,7 +27,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = { "classpath:/META-INF/spring/module-context.xml", "classpath:/META-INF/spring/test-context.xml" })
+@ContextConfiguration(locations = {"classpath:/META-INF/spring/module-context.xml", "classpath:/META-INF/spring/test-context.xml"})
 @TestExecutionListeners(value = DependencyInjectionTestExecutionListener.class)
 public class JpaDirectorySpringContextTests {
 

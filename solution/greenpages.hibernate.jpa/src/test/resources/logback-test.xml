@@ -12,19 +12,19 @@
     </logger>
 
     <!--<logger level="INFO" additivity="false" name="org.springframework.web">-->
-        <!--<appender-ref ref="STDOUT"/>-->
+    <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
 
     <!--<logger level="INFO" additivity="false" name="org.springframework.security">-->
-        <!--<appender-ref ref="STDOUT"/>-->
+    <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
 
     <!--<logger level="WARN" additivity="false" name="org.hibernate">-->
-        <!--<appender-ref ref="STDOUT"/>-->
+    <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
 
     <!--<logger level="INFO" additivity="false" name="org.springframework.integration">-->
-        <!--<appender-ref ref="STDOUT"/>-->
+    <!--<appender-ref ref="STDOUT"/>-->
     <!--</logger>-->
 
     <root level="WARN">

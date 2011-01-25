@@ -19,7 +19,7 @@
         <module>greenpages.hibernate.native</module>
         <module>greenpages.web</module>
         <module>greenpages</module>
-        <module>virgo.server</module>
+        <!--<module>virgo.server</module>-->
         <!--<module>greenpages.test</module>-->
     </modules>
 
