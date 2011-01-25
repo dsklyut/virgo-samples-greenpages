@@ -39,6 +39,18 @@
             <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
             <version>3.6.0.Final</version>
         </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.hibernate</groupId>-->
+            <!--<artifactId>org.hibernate.ejb-library</artifactId>-->
+            <!--<version>3.4.0.GA-A</version>-->
+            <!--<type>libd</type>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javax.persistence</groupId>-->
+            <!--<artifactId>com.springsource.javax.persistence</artifactId>-->
+            <!--<version>1.0.0</version>-->
+            <!--<scope>provided</scope>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>javax.transaction</groupId>
             <artifactId>com.springsource.javax.transaction</artifactId>

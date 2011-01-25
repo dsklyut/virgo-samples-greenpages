@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: GreenPages JPA
+Bundle-SymbolicName: greenpages.hibernate.jpa
+Bundle-Vendor: SpringSource Inc.
+Bundle-Version: 2.4.0.BUILD-SNAPSHOT
+Import-Template:
+ org.springframework.*;version="[3.0, 3.1)",
+ greenpages;version="[2.3, 3.0)",
+ javax.persistence.*;version="[1.0.0, 3.0.0)",
+ org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
+ javax.sql;version="0"
+Import-Bundle: org.hibernate;version="3.6.0.Final";import-scope:=application
+Import-Package:
+ org.springframework.context.weaving;version="[3.0, 3.1)",
+ org.springframework.transaction.aspectj;version="[3.0, 3.1)",
+ javax.persistence.criteria;version="[2.0.0, 3.0.0)";resolution:=optional
+Excluded-Exports:
+ greenpages.hibernate.jpa.*
+Excluded-Imports:
+ org.springframework.test.*,
+ org.junit.*

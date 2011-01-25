@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>greenpages.parent-solution</artifactId>
+        <groupId>org.eclipse.virgo.samples</groupId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+        <relativePath>../parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.eclipse.virgo.samples</groupId>
+    <artifactId>virgo.server</artifactId>
+    <version>2.4.0.BUILD-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.eclipse.virgo.kernel</groupId>
+            <artifactId>org.eclipse.virgo.kernel.deployer</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.virgo.kernel</groupId>
+            <artifactId>org.eclipse.virgo.kernel.userregion</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.virgo.medic</groupId>
+            <artifactId>org.eclipse.virgo.medic.core</artifactId>
+            <version>2.1.0.RELEASE</version>
+        </dependency>
+    </dependencies>
+
+</project>
