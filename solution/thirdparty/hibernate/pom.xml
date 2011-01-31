@@ -12,6 +12,8 @@
 
     <groupId>org.hibernate</groupId>
     <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
+    <name>org.eclipse.virgo.samples.hibernate</name>
+    <description>Hibernate 3.6.0.Final OSGi bundle</description>
     <version>3.6.0.Final</version>
 
     <!--

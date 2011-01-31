@@ -312,7 +312,7 @@
                     </excludes>
                     <junitArtifactName>org.junit:com.springsource.org.junit</junitArtifactName>
                     <argLine>
-                        -javaagent:${settings.localRepository}/org/springframework/org.springframework.instrument/3.0.0.RELEASE/org.springframework.instrument-3.0.0.RELEASE.jar
+                        -javaagent:${settings.localRepository}/org/springframework/org.springframework.instrument/${spring.version}/org.springframework.instrument-${spring.version}.jar
                     </argLine>
                 </configuration>
             </plugin>
