@@ -12,24 +12,43 @@
 
     <groupId>org.eclipse.virgo.samples</groupId>
     <artifactId>virgo.server</artifactId>
+    <description>Module to prepare Virgo for Spring 3.0.5</description>
+    <name>Greenpages :: update to Virgo :: Spring 3.0.5</name>
     <version>2.4.0.BUILD-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <dependencies>
         <dependency>
-            <groupId>org.eclipse.virgo.kernel</groupId>
-            <artifactId>org.eclipse.virgo.kernel.deployer</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.spring-library</artifactId>
+            <type>libd</type>
         </dependency>
+        <!-- need this because library does not have it but it is still used and needed -->
         <dependency>
-            <groupId>org.eclipse.virgo.kernel</groupId>
-            <artifactId>org.eclipse.virgo.kernel.userregion</artifactId>
-            <version>2.1.0.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.virgo.medic</groupId>
-            <artifactId>org.eclipse.virgo.medic.core</artifactId>
-            <version>2.1.0.RELEASE</version>
+            <groupId>org.springframework</groupId>
+            <artifactId>org.springframework.aspects</artifactId>
         </dependency>
     </dependencies>
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>copy-spring-dependencies</id>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>copy-dependencies</goal>
+                        </goals>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/spring-user-region</outputDirectory>
+                            <overWriteIfNewer>true</overWriteIfNewer>
+                            <includeGroupIds>org.springframework</includeGroupIds>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
 </project>

@@ -34,8 +34,13 @@
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>
-            <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
+            <artifactId>org.eclipse.virgo.samples.hibernate.core</artifactId>
             <version>3.6.0.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>org.eclipse.virgo.samples.javassist</artifactId>
+            <version>3.12.0.GA</version>
         </dependency>
         <dependency>
             <groupId>javax.transaction</groupId>

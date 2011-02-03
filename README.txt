@@ -1,3 +1,6 @@
+NOTE: Feb 2nd 2011 I just refactored layout and hibernate bundles without really testing anything in any detail.
+
+
 This is a re-worked virgo greenpages sample project.
 
 Changes in this version:
@@ -19,25 +22,22 @@ How it all works:
     
 2. Build it to generate wrapped hibernate jars and osgi meta-data (MANIFEST.MF) with bundlor
     cd virgo-samples-greenpages/solution
-    mvn -Pthirdparty,prepare clean install
+    mvn -Pthirdparty clean install
     
 3. Prepare Virgo Server (assuming it is already downloaded and unzipped to $VIRGO_HOME) by deleting all org.springframework.*-3.0.0.RELEASE* artifacts from $VIRGO_HOME/repository/ext
 i.e. rm $VIRGO_HOME/repository/ext/org.springframework.*-3.0.0.RELEASE*
 
-4. Switch to greenmodules project to pickup required SpringFramework jars:
-  cd virgo-samples-greenpages/solution/greenpages/target/spring-user-region
+4. Switch to virgo.server project to pickup required SpringFramework jars:
+  cd virgo-samples-greenpages/solution/virgo.server/target/spring-user-region
   cp * $VIRGO_HOME/repository/ext
   
 5. Now it is time to decide which example to run:
-   By default eclipselink.jpa repository is packaged in with the par.
-   To include hibernate configured as jpa provider rebuild greenpages par project with -Phibernate.jpa profile
-   To include hibernate configured to be used through a native API, rebuild greenpages par with -Phibernate.native profile 
-   
-   NOTE: this profile can be used in Step 2 above to save on some typing.
+   There are 3 par files with dependent bundles: greenpages.eclipselink.par, greenpages.hibernate.jpa.par, greenpages.hibernate.native.par.
+   As module name suggest, difference is only in the underlying persistence technology.  With hibernate there is a choice to use jpa or native hibernate.
    
 6. Copy dependencies to Virgo and greenpages par archive
-  cp greenpages/target/par-provided/* $VIRGO_HOME/repository/usr
-  cp greenpages/target/greenpages-solution-2.4.0.BUILD-SNAPSHOT.par $VIRGO_HOME/pickup
+  cp $PAR_FROM_STEP_5_MODULE/target/par-provided/* $VIRGO_HOME/repository/usr
+  cp $PAR_FROM_STEP_5_MODULE/target/*.par $VIRGO_HOME/pickup
   
 7. Start demo database
   cd virgo-samples-greenpages/db
