@@ -13,14 +13,10 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eclipse.virgo.samples</groupId>
-    <artifactId>greenpages-solution</artifactId>
-    <name>GreenPages PAR</name>
+    <artifactId>greenpages-solution-eclipselink</artifactId>
+    <name>GreenPages PAR :: with EclipseLink</name>
     <description>GreenPages PAR</description>
     <packaging>par</packaging>
-
-    <properties>
-        <persistence.artifactId>greenpages.eclipselink.jpa-solution</persistence.artifactId>
-    </properties>
 
     <dependencies>
         <dependency>
@@ -30,7 +26,7 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.virgo.samples</groupId>
-            <artifactId>${persistence.artifactId}</artifactId>
+            <artifactId>greenpages.eclipselink.jpa-solution</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -85,8 +81,8 @@
                         <configuration>
                             <outputDirectory>${project.build.directory}/par-provided</outputDirectory>
                             <overWriteIfNewer>true</overWriteIfNewer>
-                            <excludeGroupIds>org.eclipse.virgo.samples,org.apache.log4j,org.slf4j,ch.qos.logback
-                            </excludeGroupIds>
+                            <!-- exclude dependencies that are already present in par or virgo -->
+                            <excludeGroupIds>org.eclipse.virgo.samples,org.apache.log4j,org.slf4j,ch.qos.logback</excludeGroupIds>
                         </configuration>
                     </execution>
                 </executions>
