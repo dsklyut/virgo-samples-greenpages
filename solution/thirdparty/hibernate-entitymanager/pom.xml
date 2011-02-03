@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.eclipse.virgo.samples.thirdparty</groupId>
+        <artifactId>thirdparty</artifactId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.hibernate</groupId>
+    <artifactId>org.eclipse.virgo.samples.hibernate.entitymanager</artifactId>
+    <name>org.eclipse.virgo.samples.hibernate.entitymanager</name>
+    <description>Hibernate Entity Manager (JPA) 3.6.0.Final OSGi bundle</description>
+    <version>3.6.0.Final</version>
+
+    <!--
+    hibernate-c3p0
+    hibernate-core
+    hibernate-entitymanager
+    hibernate-infinispan
+    hibernate-oscache
+    hibernate-swarmcache
+    hibernate-commons-annotations
+    hibernate-ehcache
+    hibernate-envers
+    hibernate-jbosscache
+    hibernate-proxool
+    hibernate-testing
+-->
+    <properties>
+        <wrapped.version>3.6.0.Final</wrapped.version>
+    </properties>
+    <dependencies>
+        
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hibernate-entitymanager</artifactId>
+            <version>${wrapped.version}</version>
+            <optional>true</optional>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-core</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>cglib</groupId>
+                    <artifactId>cglib</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.hibernate.javax.persistence</groupId>
+                    <artifactId>hibernate-jpa-2.0-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.slf4j</groupId>
+                    <artifactId>slf4j-api</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>javassist</groupId>
+                    <artifactId>javassist</artifactId>
+                </exclusion>
+                <!--
+cglib:cglib:jar:2.2:compile
+[INFO] |  |  \- asm:asm:jar:3.1:compile
+
+                -->
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>org.eclipse.virgo.samples.hibernate.core</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        
+        <!-- from hibernate-entitymanager -->
+        <!--<dependency>-->
+            <!--<groupId>net.sourceforge.cglib</groupId>-->
+            <!--<artifactId>com.springsource.net.sf.cglib</artifactId>-->
+            <!--<version>2.2.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.objectweb.asm</groupId>-->
+            <!--<artifactId>com.springsource.org.objectweb.asm</artifactId>-->
+            <!--<version>3.2.0</version>-->
+            <!--&lt;!&ndash; version upped from 3.1 &ndash;&gt;-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javassist</groupId>-->
+            <!--<artifactId>org.eclipse.virgo.samples.javassist</artifactId>-->
+            <!--<version>3.12.0.GA</version>-->
+        <!--</dependency>-->
+
+        <!-- need validation jar -->
+        <!--<dependency>-->
+            <!--<groupId>javax.validation</groupId>-->
+            <!--<artifactId>com.springsource.javax.validation</artifactId>-->
+            <!--<version>1.0.0.GA</version>-->
+        <!--</dependency>-->
+    </dependencies>
+
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>full</id>-->
+            <!--<dependencies>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-ehcache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-jbosscache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-infinispan</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-oscache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-swarmcache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-c3p0</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-proxool</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-envers</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+            <!--</dependencies>-->
+        <!--</profile>-->
+    <!--</profiles>-->
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <!--<createSourcesJar>true</createSourcesJar>-->
+                            <artifactSet>
+                                <includes>
+                                    <include>org.hibernate:hibernate-entitymanager</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.springsource.bundlor</groupId>
+                <artifactId>com.springsource.bundlor.maven</artifactId>
+                <executions>
+                    <execution>
+                        <id>build-manifest</id>
+                        <goals>
+                            <goal>bundlor</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <inputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</inputPath>
+                            <outputPath>${basedir}/src/main/resources</outputPath>
+                            <!-- used to properly set-up versions for system packages -->
+                            <osgiProfilePath>${basedir}/../../java6-server.profile</osgiProfilePath>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-bundle</id>
+                        <goals>
+                            <goal>bundlor</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <inputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</inputPath>
+                            <outputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</outputPath>
+                            <!-- used to properly set-up versions for system packages -->
+                            <osgiProfilePath>${basedir}/../../java6-server.profile</osgiProfilePath>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>

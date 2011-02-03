@@ -65,41 +65,17 @@
                     <groupId>org.slf4j</groupId>
                     <artifactId>slf4j-api</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>org.hibernate</groupId>
+                    <artifactId>hibernate-commons-annotations</artifactId>
+                </exclusion>
             </exclusions>
-            <!--
-[INFO] |  +- org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final:compile
-
-            -->
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>${project.groupId}</groupId>-->
-            <!--<artifactId>hibernate-entitymanager</artifactId>-->
-            <!--<version>${wrapped.version}</version>-->
-            <!--<optional>true</optional>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<groupId>cglib</groupId>-->
-                    <!--<artifactId>cglib</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.hibernate.javax.persistence</groupId>-->
-                    <!--<artifactId>hibernate-jpa-2.0-api</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<groupId>org.slf4j</groupId>-->
-                    <!--<artifactId>slf4j-api</artifactId>-->
-                <!--</exclusion>-->
-                <!--<exclusion>-->
-                    <!--<groupId>javassist</groupId>-->
-                    <!--<artifactId>javassist</artifactId>-->
-                <!--</exclusion>-->
-                <!--&lt;!&ndash;-->
-<!--cglib:cglib:jar:2.2:compile-->
-<!--[INFO] |  |  \- asm:asm:jar:3.1:compile-->
-                <!---->
-                <!--&ndash;&gt;-->
-            <!--</exclusions>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>org.eclipse.virgo.samples.hibernate.annotations.commons</artifactId>
+            <version>3.2.0.Final</version>
+        </dependency>
 
         <!-- replacement osgi dependencies -->
 
@@ -132,87 +108,29 @@
             <scope>provided</scope>
         </dependency>
 
-        <!-- from hibernate-entitymanager -->
-        <!--<dependency>-->
-            <!--<groupId>net.sourceforge.cglib</groupId>-->
-            <!--<artifactId>com.springsource.net.sf.cglib</artifactId>-->
-            <!--<version>2.2.0</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.objectweb.asm</groupId>-->
-            <!--<artifactId>com.springsource.org.objectweb.asm</artifactId>-->
-            <!--<version>3.2.0</version>-->
-            <!--&lt;!&ndash; version upped from 3.1 &ndash;&gt;-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>javassist</groupId>-->
-            <!--<artifactId>org.eclipse.virgo.samples.javassist</artifactId>-->
-            <!--<version>3.12.0.GA</version>-->
-        <!--</dependency>-->
 
         <!-- need validation jar -->
-        <!--<dependency>-->
-            <!--<groupId>javax.validation</groupId>-->
-            <!--<artifactId>com.springsource.javax.validation</artifactId>-->
-            <!--<version>1.0.0.GA</version>-->
-        <!--</dependency>-->
-    </dependencies>
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>com.springsource.javax.validation</artifactId>
+            <version>1.0.0.GA</version>
+            <optional>true</optional>
+        </dependency>
 
-    <!--<profiles>-->
-        <!--<profile>-->
-            <!--<id>full</id>-->
-            <!--<dependencies>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-ehcache</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-jbosscache</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-infinispan</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-oscache</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-swarmcache</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-c3p0</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-proxool</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-                <!--<dependency>-->
-                    <!--<groupId>${project.groupId}</groupId>-->
-                    <!--<artifactId>hibernate-envers</artifactId>-->
-                    <!--<version>${wrapped.version}</version>-->
-                    <!--<optional>true</optional>-->
-                <!--</dependency>-->
-            <!--</dependencies>-->
-        <!--</profile>-->
-    <!--</profiles>-->
+        <!-- another pseudo optional i.e. pick one for bytecode manipulation -->
+        <dependency>
+            <groupId>net.sourceforge.cglib</groupId>
+            <artifactId>com.springsource.net.sf.cglib</artifactId>
+            <version>2.2.0</version>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>javassist</groupId>
+            <artifactId>org.eclipse.virgo.samples.javassist</artifactId>
+            <version>3.12.0.GA</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -226,11 +144,12 @@
                             <goal>shade</goal>
                         </goals>
                         <configuration>
-                            <createSourcesJar>true</createSourcesJar>
+                            <!--<createSourcesJar>true</createSourcesJar>-->
                             <artifactSet>
                                 <excludes>
                                     <exclude>org.hibernate:jtidy</exclude>
                                     <exclude>org.hibernate:hibernate-tools</exclude>
+                                    <exclude>org.hibernate:org.eclipse.virgo.samples.hibernate.annotations.commons</exclude>
                                 </excludes>
                                 <includes>
                                     <include>org.hibernate:*</include>

@@ -21,6 +21,7 @@
         <module>greenpages.eclipselink.par</module>
         <module>greenpages.hibernate.jpa.par</module>
         <module>greenpages.hibernate.native.par</module>
+        
         <!--<module>virgo.server</module>-->
         <!--<module>greenpages.test</module>-->
     </modules>

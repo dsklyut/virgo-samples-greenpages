@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>thirdparty</artifactId>
+        <groupId>org.eclipse.virgo.samples.thirdparty</groupId>
+        <version>2.4.0.BUILD-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.hibernate</groupId>
+    <artifactId>org.eclipse.virgo.samples.hibernate.annotations.commons</artifactId>
+    <name>org.eclipse.virgo.samples.hibernate.annotations.commons</name>
+    <description>Wrapped OSGi bundle of hibernate-commons-annotations</description>
+    <version>3.2.0.Final</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>hibernate-commons-annotations</artifactId>
+            <version>${project.version}</version>
+            <optional>true</optional>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>1.4</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>shade</goal>
+                        </goals>
+                        <configuration>
+                            <!--<createSourcesJar>true</createSourcesJar>-->
+                            <artifactSet>
+                                <excludes>
+                                    <exclude>org.hibernate:jtidy</exclude>
+                                    <exclude>org.hibernate:hibernate-tools</exclude>
+                                </excludes>
+                                <includes>
+                                    <include>org.hibernate:*</include>
+                                </includes>
+                            </artifactSet>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>com.springsource.bundlor</groupId>
+                <artifactId>com.springsource.bundlor.maven</artifactId>
+                <executions>
+                    <execution>
+                        <id>build-manifest</id>
+                        <goals>
+                            <goal>bundlor</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <inputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</inputPath>
+                            <outputPath>${basedir}/src/main/resources</outputPath>
+                            <!-- used to properly set-up versions for system packages -->
+                            <osgiProfilePath>${basedir}/../../java6-server.profile</osgiProfilePath>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>generate-bundle</id>
+                        <goals>
+                            <goal>bundlor</goal>
+                        </goals>
+                        <phase>package</phase>
+                        <configuration>
+                            <inputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</inputPath>
+                            <outputPath>${project.build.directory}/${project.build.finalName}.${project.packaging}</outputPath>
+                            <!-- used to properly set-up versions for system packages -->
+                            <osgiProfilePath>${basedir}/../../java6-server.profile</osgiProfilePath>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>
