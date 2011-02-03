@@ -13,8 +13,8 @@
 
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.eclipse.virgo.samples</groupId>
-    <artifactId>greenpages-solution-eclipselink</artifactId>
-    <name>GreenPages PAR :: with EclipseLink</name>
+    <artifactId>greenpages-solution-hibernate-native</artifactId>
+    <name>GreenPages PAR :: with Hibernate native (no jpa)</name>
     <description>GreenPages PAR</description>
     <packaging>par</packaging>
 
@@ -26,7 +26,7 @@
         </dependency>
         <dependency>
             <groupId>org.eclipse.virgo.samples</groupId>
-            <artifactId>greenpages.eclipselink.jpa-solution</artifactId>
+            <artifactId>greenpages.hibernate.native-solution</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>
@@ -65,7 +65,7 @@
                 <artifactId>maven-par-plugin</artifactId>
                 <version>1.0.0.RELEASE</version>
                 <configuration>
-                    <applicationSymbolicName>greenpages-eclipselink</applicationSymbolicName>
+                    <applicationSymbolicName>greenpages-hibernate-native</applicationSymbolicName>
                 </configuration>
             </plugin>
             <plugin>
@@ -89,57 +89,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <profiles>
-        <profile>
-            <id>hibernate.jpa</id>
-            <properties>
-                <persistence.artifactId>greenpages.hibernate.jpa-solution</persistence.artifactId>
-            </properties>
-        </profile>
-        <profile>
-            <id>hibernate.native</id>
-            <properties>
-                <persistence.artifactId>greenpages.hibernate.native-solution</persistence.artifactId>
-            </properties>
-        </profile>
-        <profile>
-            <id>prepare</id>
-            <dependencies>
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>org.springframework.spring-library</artifactId>
-                    <type>libd</type>
-                </dependency>
-                <!-- need this because library does not have it but it is still used and needed -->
-                <dependency>
-                    <groupId>org.springframework</groupId>
-                    <artifactId>org.springframework.aspects</artifactId>
-                </dependency>
-            </dependencies>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-dependency-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>copy-spring-dependencies</id>
-                                <phase>generate-resources</phase>
-                                <goals>
-                                    <goal>copy-dependencies</goal>
-                                </goals>
-                                <configuration>
-                                    <outputDirectory>${project.build.directory}/spring-user-region</outputDirectory>
-                                    <overWriteIfNewer>true</overWriteIfNewer>
-                                    <includeGroupIds>org.springframework</includeGroupIds>
-                                </configuration>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
-
 </project>

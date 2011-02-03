@@ -12,7 +12,7 @@
 
     <groupId>org.hibernate</groupId>
     <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
-    <name>org.eclipse.virgo.samples.hibernate</name>
+    <name>org.eclipse.virgo.samples.hibernate.core</name>
     <description>Hibernate 3.6.0.Final OSGi bundle</description>
     <version>3.6.0.Final</version>
 
@@ -71,35 +71,35 @@
 
             -->
         </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>${wrapped.version}</version>
-            <optional>true</optional>
-            <exclusions>
-                <exclusion>
-                    <groupId>cglib</groupId>
-                    <artifactId>cglib</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.hibernate.javax.persistence</groupId>
-                    <artifactId>hibernate-jpa-2.0-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>org.slf4j</groupId>
-                    <artifactId>slf4j-api</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>javassist</groupId>
-                    <artifactId>javassist</artifactId>
-                </exclusion>
-                <!--
-cglib:cglib:jar:2.2:compile
-[INFO] |  |  \- asm:asm:jar:3.1:compile
-                
-                -->
-            </exclusions>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>${project.groupId}</groupId>-->
+            <!--<artifactId>hibernate-entitymanager</artifactId>-->
+            <!--<version>${wrapped.version}</version>-->
+            <!--<optional>true</optional>-->
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<groupId>cglib</groupId>-->
+                    <!--<artifactId>cglib</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.hibernate.javax.persistence</groupId>-->
+                    <!--<artifactId>hibernate-jpa-2.0-api</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>org.slf4j</groupId>-->
+                    <!--<artifactId>slf4j-api</artifactId>-->
+                <!--</exclusion>-->
+                <!--<exclusion>-->
+                    <!--<groupId>javassist</groupId>-->
+                    <!--<artifactId>javassist</artifactId>-->
+                <!--</exclusion>-->
+                <!--&lt;!&ndash;-->
+<!--cglib:cglib:jar:2.2:compile-->
+<!--[INFO] |  |  \- asm:asm:jar:3.1:compile-->
+                <!---->
+                <!--&ndash;&gt;-->
+            <!--</exclusions>-->
+        <!--</dependency>-->
 
         <!-- replacement osgi dependencies -->
 
@@ -133,86 +133,86 @@ cglib:cglib:jar:2.2:compile
         </dependency>
 
         <!-- from hibernate-entitymanager -->
-        <dependency>
-            <groupId>net.sourceforge.cglib</groupId>
-            <artifactId>com.springsource.net.sf.cglib</artifactId>
-            <version>2.2.0</version>
-        </dependency>
-        <dependency>
-            <groupId>org.objectweb.asm</groupId>
-            <artifactId>com.springsource.org.objectweb.asm</artifactId>
-            <version>3.2.0</version>
-            <!-- version upped from 3.1 -->
-        </dependency>
-        <dependency>
-            <groupId>javassist</groupId>
-            <artifactId>org.eclipse.virgo.samples.javassist</artifactId>
-            <version>3.12.0.GA</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>net.sourceforge.cglib</groupId>-->
+            <!--<artifactId>com.springsource.net.sf.cglib</artifactId>-->
+            <!--<version>2.2.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.objectweb.asm</groupId>-->
+            <!--<artifactId>com.springsource.org.objectweb.asm</artifactId>-->
+            <!--<version>3.2.0</version>-->
+            <!--&lt;!&ndash; version upped from 3.1 &ndash;&gt;-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>javassist</groupId>-->
+            <!--<artifactId>org.eclipse.virgo.samples.javassist</artifactId>-->
+            <!--<version>3.12.0.GA</version>-->
+        <!--</dependency>-->
 
         <!-- need validation jar -->
-        <dependency>
-            <groupId>javax.validation</groupId>
-            <artifactId>com.springsource.javax.validation</artifactId>
-            <version>1.0.0.GA</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>javax.validation</groupId>-->
+            <!--<artifactId>com.springsource.javax.validation</artifactId>-->
+            <!--<version>1.0.0.GA</version>-->
+        <!--</dependency>-->
     </dependencies>
 
-    <profiles>
-        <profile>
-            <id>full</id>
-            <dependencies>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-ehcache</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-jbosscache</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-infinispan</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-oscache</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-swarmcache</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-c3p0</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-proxool</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-                <dependency>
-                    <groupId>${project.groupId}</groupId>
-                    <artifactId>hibernate-envers</artifactId>
-                    <version>${wrapped.version}</version>
-                    <optional>true</optional>
-                </dependency>
-            </dependencies>
-        </profile>
-    </profiles>
+    <!--<profiles>-->
+        <!--<profile>-->
+            <!--<id>full</id>-->
+            <!--<dependencies>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-ehcache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-jbosscache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-infinispan</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-oscache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-swarmcache</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-c3p0</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-proxool</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+                <!--<dependency>-->
+                    <!--<groupId>${project.groupId}</groupId>-->
+                    <!--<artifactId>hibernate-envers</artifactId>-->
+                    <!--<version>${wrapped.version}</version>-->
+                    <!--<optional>true</optional>-->
+                <!--</dependency>-->
+            <!--</dependencies>-->
+        <!--</profile>-->
+    <!--</profiles>-->
 
     <build>
         <plugins>
