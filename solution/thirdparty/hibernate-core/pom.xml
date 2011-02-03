@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>org.hibernate</groupId>
-    <artifactId>org.eclipse.virgo.samples.hibernate</artifactId>
+    <artifactId>org.eclipse.virgo.samples.hibernate.core</artifactId>
     <name>org.eclipse.virgo.samples.hibernate.core</name>
-    <description>Hibernate 3.6.0.Final OSGi bundle</description>
+    <description>Hibernate Core 3.6.0.Final OSGi bundle</description>
     <version>3.6.0.Final</version>
 
     <!--

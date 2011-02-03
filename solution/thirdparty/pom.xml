@@ -12,7 +12,7 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>hibernate</module>
+        <module>hibernate-core</module>
         <module>javassist</module>
     </modules>
 
