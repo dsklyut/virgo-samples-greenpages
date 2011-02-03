@@ -46,6 +46,7 @@
     <orderEntry type="library" name="Maven: net.sourceforge.cglib:com.springsource.net.sf.cglib:2.2.0" level="project" />
     <orderEntry type="library" name="Maven: org.objectweb.asm:com.springsource.org.objectweb.asm:3.2.0" level="project" />
     <orderEntry type="library" name="Maven: javassist:org.eclipse.virgo.samples.javassist:3.12.0.GA" level="project" />
+    <orderEntry type="library" name="Maven: javax.validation:com.springsource.javax.validation:1.0.0.GA" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.transaction:com.springsource.javax.transaction:1.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit:com.springsource.org.junit:4.7.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.test:3.0.5.RELEASE" level="project" />
