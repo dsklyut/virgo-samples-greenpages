@@ -9,7 +9,7 @@ Import-Template:
  javax.persistence;version="[1.0.0, 3.0.0)",
  org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
  javax.sql;version="0"
-Import-Bundle: org.hibernate;version="3.6.0.Final";import-scope:=application
+Import-Bundle: org.eclipse.virgo.samples.hibernate.core;version="3.6.0.Final";import-scope:=application
 Import-Package:
  org.springframework.context.weaving;version="[3.0, 3.1)",
  org.springframework.transaction.aspectj;version="[3.0, 3.1)"
