@@ -1,4 +1,5 @@
 Manifest-Version: 1.0
+Bundle-ClassPath: .,WEB-INF/classes
 Built-By: dsklyut
 Tool: Bundlor 1.0.0.RELEASE
 Import-Library: org.springframework.spring;version="[3.0, 3.1)"
@@ -8,16 +9,19 @@ Web-ContextPath: greenpages
 Import-Bundle: com.springsource.org.apache.taglibs.standard;version="[
  1.1.2,1.3)"
 Bundle-Version: 2.4.0.BUILD-SNAPSHOT
-Build-Jdk: 1.6.0_22
+Build-Jdk: 1.6.0_29
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: greenpages.web
-Import-Package: freemarker.cache;version="[2.3.15,2.3.15]",greenpages;
- version="[2.3, 3.0)",javax.servlet.jsp.jstl.core;version="[1.1.2,1.2.
- 0)",org.eclipse.virgo.web.dm;version="[2.0.0, 3.0.0)",org.springframe
- work.beans.factory.annotation;version="[3.0, 3.1)",org.springframewor
- k.stereotype;version="[3.0, 3.1)",org.springframework.web.bind.annota
- tion;version="[3.0, 3.1)",org.springframework.web.context;version="[3
- .0, 3.1)",org.springframework.web.servlet;version="[3.0, 3.1)",org.sp
- ringframework.web.servlet.view.freemarker;version="[3.0, 3.1)"
+Import-Package: freemarker.cache;version="[2.3.18,3)",greenpages;versi
+ on="[2.3, 3.0)",javax.el;version="1.0",javax.servlet;version="[2.5, 4
+ )",javax.servlet.http;version="2.5",javax.servlet.jsp;version="2.1",j
+ avax.servlet.jsp.el;version="2.1",javax.servlet.jsp.jstl.core;version
+ ="[1.1.2,2)",javax.servlet.jsp.tagext;version="2.1",org.eclipse.virgo
+ .web.dm;version="[3.0.0, 4.0.0)",org.springframework.beans.factory.an
+ notation;version="[3.0, 3.1)",org.springframework.stereotype;version=
+ "[3.0, 3.1)",org.springframework.web.bind.annotation;version="[3.0, 3
+ .1)",org.springframework.web.context;version="[3.0, 3.1)",org.springf
+ ramework.web.servlet;version="[3.0, 3.1)",org.springframework.web.ser
+ vlet.view.freemarker;version="[3.0, 3.1)"
 Archiver-Version: Plexus Archiver
 

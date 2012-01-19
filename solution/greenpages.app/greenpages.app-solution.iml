@@ -1,15 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
-  <component name="FacetManager">
-    <facet type="Spring" name="Spring">
-      <configuration>
-        <fileset id="fileset1" name="app.context" removed="false">
-          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/module-context.xml</file>
-          <file>file://$MODULE_DIR$/src/main/resources/META-INF/spring/osgi-context.xml</file>
-        </fileset>
-      </configuration>
-    </facet>
-  </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_6" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/target/classes" />
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
@@ -39,7 +29,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.servlet:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.portlet:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:com.springsource.javax.servlet:2.5.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit:com.springsource.org.junit:4.7.0" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:com.springsource.slf4j.api:1.6.1" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:com.springsource.slf4j.org.apache.commons.logging:1.6.1" level="project" />

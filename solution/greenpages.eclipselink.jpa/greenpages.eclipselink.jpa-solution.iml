@@ -35,7 +35,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.servlet:3.0.5.RELEASE" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: org.springframework:org.springframework.web.portlet:3.0.5.RELEASE" level="project" />
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:com.springsource.javax.servlet:2.5.0" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:com.springsource.javax.persistence:2.0.0" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.core:2.1.1" level="project" />
     <orderEntry type="library" name="Maven: org.eclipse.persistence:org.eclipse.persistence.asm:2.1.1" level="project" />

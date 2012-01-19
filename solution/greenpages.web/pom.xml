@@ -39,7 +39,7 @@
         </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>com.springsource.javax.servlet</artifactId>
+            <artifactId>javax.servlet</artifactId>
             <scope>provided</scope>
         </dependency>
         <dependency>

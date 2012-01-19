@@ -11,7 +11,6 @@ Import-Template:
  org.apache.commons.dbcp.*;version="[1.2.2.osgi, 1.2.2.osgi]",
  javax.sql;version="0"
 Import-Bundle: org.eclipse.virgo.samples.hibernate.core;version="3.6.0.Final";import-scope:=application,
- org.eclipse.virgo.samples.hibernate.entitymanager;version="3.6.0.Final";import-scope:=application,
  org.eclipse.virgo.samples.hibernate.annotations.commons;version="3.2.0.Final";import-scope:=application
 Import-Package:
  org.springframework.context.weaving;version="[3.0, 3.1)",
