@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: GreenPages Service
-Bundle-SymbolicName: greenpages
-Bundle-Vendor: SpringSource Inc.
-Bundle-Version: 2.4.0.BUILD-SNAPSHOT
-Import-Template: 
- org.springframework.*;version="[3.0, 3.1)"
