@@ -1,4 +1,4 @@
-NOTE: 1/19/2012 - UPGRADED TO WORK WITH VIRGO 3.0.2.RELEASE
+NOTE: 3/13/2012 - UPGRADED TO WORK WITH VIRGO 3.0.2.RELEASE.  eclipselink and hibernate.native "work on my box"
 
 This is a re-worked virgo greenpages sample project.
 
