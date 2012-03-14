@@ -25,8 +25,8 @@ How it all works:
    As module name suggest, difference is only in the underlying persistence technology.  With hibernate there is a choice to use jpa or native hibernate.
    
 4. Copy dependencies to Virgo and greenpages par archive
-  cp $PAR_FROM_STEP_5_MODULE/target/par-provided/* $VIRGO_HOME/repository/usr
-  cp $PAR_FROM_STEP_5_MODULE/target/*.par $VIRGO_HOME/pickup
+  cp $PAR_FROM_STEP_3_MODULE/target/par-provided/* $VIRGO_HOME/repository/usr
+  cp $PAR_FROM_STEP_3_MODULE/target/*.par $VIRGO_HOME/pickup
   
 5. Start demo database
   cd virgo-samples-greenpages/db

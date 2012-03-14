@@ -122,13 +122,18 @@
             <groupId>net.sourceforge.cglib</groupId>
             <artifactId>com.springsource.net.sf.cglib</artifactId>
             <version>2.2.0</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>javassist</groupId>
             <artifactId>org.eclipse.virgo.samples.javassist</artifactId>
             <version>3.12.0.GA</version>
-            <optional>true</optional>
+        </dependency>
+
+        <!-- optional but not if using cglib -->
+        <dependency>
+            <groupId>asm</groupId>
+            <artifactId>org.eclipse.virgo.samples.asm</artifactId>
+            <version>3.3.1</version>
         </dependency>
     </dependencies>
 

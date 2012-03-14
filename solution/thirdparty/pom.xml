@@ -16,6 +16,7 @@
         <module>hibernate-commons-annotations</module>
         <module>hibernate-core</module>
         <module>hibernate-entitymanager</module>
+        <module>asm</module>
     </modules>
 
     <build>

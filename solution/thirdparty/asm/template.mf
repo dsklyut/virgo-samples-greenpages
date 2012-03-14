@@ -1,0 +1,5 @@
+Bundle-SymbolicName: org.eclipse.virgo.samples.asm
+Bundle-ManifestVersion: 2
+Bundle-Version: 3.3.1
+Import-Template: org.slf4j.*;version="[1.5.6, 2.0.0)"
+
