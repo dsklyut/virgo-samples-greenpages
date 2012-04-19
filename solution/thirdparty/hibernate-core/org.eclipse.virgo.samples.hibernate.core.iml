@@ -19,6 +19,7 @@
     <orderEntry type="library" name="Maven: javax.validation:com.springsource.javax.validation:1.0.0.GA" level="project" />
     <orderEntry type="library" name="Maven: net.sourceforge.cglib:com.springsource.net.sf.cglib:2.2.0" level="project" />
     <orderEntry type="module" module-name="org.eclipse.virgo.samples.javassist" />
+    <orderEntry type="module" module-name="asm" />
   </component>
 </module>
 

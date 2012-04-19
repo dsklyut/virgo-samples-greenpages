@@ -94,11 +94,11 @@ cglib:cglib:jar:2.2:compile
         <!--</dependency>-->
 
         <!-- need validation jar -->
-        <!--<dependency>-->
-            <!--<groupId>javax.validation</groupId>-->
-            <!--<artifactId>com.springsource.javax.validation</artifactId>-->
-            <!--<version>1.0.0.GA</version>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>com.springsource.javax.validation</artifactId>
+            <version>1.0.0.GA</version>
+        </dependency>
     </dependencies>
 
     <!--<profiles>-->

@@ -18,12 +18,9 @@
       <sourceFolder url="file://$MODULE_DIR$/src/main/resources" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/java" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/src/test/resources" isTestSource="true" />
-      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/test-annotations" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/target/classes" />
       <excludeFolder url="file://$MODULE_DIR$/target/maven-archiver" />
-      <excludeFolder url="file://$MODULE_DIR$/target/surefire" />
-      <excludeFolder url="file://$MODULE_DIR$/target/surefire-reports" />
       <excludeFolder url="file://$MODULE_DIR$/target/test-classes" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -53,7 +50,9 @@
     <orderEntry type="library" name="Maven: org.apache.commons:com.springsource.org.apache.commons.collections:3.2.1" level="project" />
     <orderEntry type="library" name="Maven: org.dom4j:com.springsource.org.dom4j:1.6.1" level="project" />
     <orderEntry type="library" name="Maven: javax.persistence:com.springsource.javax.persistence:2.0.0" level="project" />
+    <orderEntry type="library" name="Maven: net.sourceforge.cglib:com.springsource.net.sf.cglib:2.2.0" level="project" />
     <orderEntry type="module" module-name="org.eclipse.virgo.samples.javassist" />
+    <orderEntry type="module" module-name="asm" />
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.transaction:com.springsource.javax.transaction:1.1.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.junit:com.springsource.org.junit:4.7.0" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:org.springframework.test:3.0.5.RELEASE" level="project" />
