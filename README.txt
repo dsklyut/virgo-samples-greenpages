@@ -1,4 +1,5 @@
 NOTE: 3/13/2012 - UPGRADED TO WORK WITH VIRGO 3.0.2.RELEASE.  eclipselink and hibernate.native "work on my box"
+NOTE: 4/18/2012 - fixed issue with hibernate.jpa - works now also.
 
 This is a re-worked virgo greenpages sample project.
 
